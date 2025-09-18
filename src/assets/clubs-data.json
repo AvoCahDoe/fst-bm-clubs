@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Club Informatique",
+    "category": "Informatique",
+    "description": "Apprenez la programmation, participez à des hackathons et développez des projets innovants.",
+    "logo": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 150,
+    "meetings": "Mercredis 18h00",
+    "longDescription": "Le Club Informatique est une communauté dynamique d'étudiants passionnés par la technologie et l'innovation. Nous organisons des séances de codage hebdomadaires, des hackathons mensuels et des conférences avec des professionnels de l'industrie. Nos membres travaillent sur des projets passionnants allant des applications mobiles à la recherche en intelligence artificielle.",
+    "activities": [
+      "Ateliers de programmation hebdomadaires",
+      "Hackathons mensuels",
+      "Conférences d'experts",
+      "Collaboration sur des projets",
+      "Réseautage professionnel"
+    ],
+    "contact": {
+      "email": "informatique@fstbm.ac.ma",
+      "president": "Ahmed Benali"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Club Social",
+    "category": "Social",
+    "description": "Participez à des actions humanitaires et des événements communautaires pour aider les nécessiteux.",
+    "logo": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 85,
+    "meetings": "Vendredis 16h00",
+    "longDescription": "Notre Club Social s'engage à améliorer la vie de notre communauté locale par le service et l'action. Nous organisons des collectes de fonds, des visites dans les orphelinats, des campagnes de sensibilisation et des événements caritatifs. Rejoignez-nous pour faire une différence positive dans la vie des autres.",
+    "activities": [
+      "Collectes de fonds pour les œuvres caritatives",
+      "Visites aux maisons de retraite",
+      "Campagnes de sensibilisation",
+      "Événements communautaires",
+      "Programmes de tutorat"
+    ],
+    "contact": {
+      "email": "social@fstbm.ac.ma",
+      "president": "Fatima Zahra El Mansouri"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Club Mécatronique",
+    "category": "Mecatronique",
+    "description": "Explorez l'ingénierie robotique et les systèmes automatisés avec des projets pratiques.",
+    "logo": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 65,
+    "meetings": "Mardis 19h00",
+    "longDescription": "Le Club Mécatronique combine l'ingénierie mécanique, électronique et informatique pour créer des systèmes intelligents. Nous concevons et construisons des robots, des drones et d'autres dispositifs automatisés. Nos membres participent à des compétitions nationales et internationales tout en développant des compétences techniques précieuses.",
+    "activities": [
+      "Conception et construction de robots",
+      "Ateliers d'électronique",
+      "Programmation de microcontrôleurs",
+      "Compétitions de robotique",
+      "Projets d'ingénierie collaborative"
+    ],
+    "contact": {
+      "email": "mecatronique@fstbm.ac.ma",
+      "president": "Youssef Amrani"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Club Environnement",
+    "category": "Environnement",
+    "description": "Promouvez la durabilité et organisez des initiatives écologiques sur le campus.",
+    "logo": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 95,
+    "meetings": "Samedis 14h00",
+    "longDescription": "Le Club Environnement est dédié à la promotion de la durabilité et de la sensibilisation écologique sur le campus et dans la communauté. Nous organisons des événements de nettoyage, des ateliers sur les énergies renouvelables, des initiatives de recyclage et des campagnes de sensibilisation. Nos membres s'engagent à faire un impact positif sur la planète.",
+    "activities": [
+      "Événements de nettoyage du campus",
+      "Ateliers sur les énergies renouvelables",
+      "Initiatives de recyclage",
+      "Jardins communautaires",
+      "Campagnes de sensibilisation environnementale"
+    ],
+    "contact": {
+      "email": "environnement@fstbm.ac.ma",
+      "president": "Leila Chraibi"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Club Sports",
+    "category": "Sports",
+    "description": "Participez à des compétitions sportives et des entraînements réguliers pour rester en forme.",
+    "logo": "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 120,
+    "meetings": "Lundis & Jeudis 17h00",
+    "longDescription": "Notre Club Sports offre des opportunités compétitives et récréatives pour les étudiants de tous niveaux. Nous avons des équipes pour le football, le basketball, le volley-ball et d'autres sports. Nos entraînements réguliers, nos tournois internes et nos compétitions inter-universitaires favorisent l'esprit d'équipe et la forme physique.",
+    "activities": [
+      "Entraînements réguliers",
+      "Tournois internes",
+      "Compétitions inter-universitaires",
+      "Événements sportifs communautaires",
+      "Programmes de conditionnement physique"
+    ],
+    "contact": {
+      "email": "sports@fstbm.ac.ma",
+      "president": "Karim Boutaleb"
+    }
+  }
+]

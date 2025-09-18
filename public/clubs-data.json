@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "name": "Computer Science Club",
+    "category": "academic",
+    "description": "Learn programming, participate in hackathons, and build amazing projects with fellow students.",
+    "logo": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 150,
+    "meetings": "Wednesdays 6:00 PM"
+  },
+  {
+    "id": 2,
+    "name": "Photography Club",
+    "category": "arts",
+    "description": "Capture beautiful moments around campus and learn professional photography techniques.",
+    "logo": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 85,
+    "meetings": "Fridays 4:00 PM"
+  },
+  {
+    "id": 3,
+    "name": "Debate Society",
+    "category": "academic",
+    "description": "Enhance your public speaking skills and engage in intellectual discussions on current topics.",
+    "logo": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 65,
+    "meetings": "Tuesdays 7:00 PM"
+  },
+  {
+    "id": 4,
+    "name": "Basketball Club",
+    "category": "sports",
+    "description": "Competitive and recreational basketball for all skill levels. Join our weekly games!",
+    "logo": "https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 45,
+    "meetings": "Mondays & Wednesdays 5:00 PM"
+  },
+  {
+    "id": 5,
+    "name": "Music Ensemble",
+    "category": "arts",
+    "description": "Perform classical and contemporary music together. All instruments welcome!",
+    "logo": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 35,
+    "meetings": "Thursdays 6:30 PM"
+  },
+  {
+    "id": 6,
+    "name": "Environmental Club",
+    "category": "academic",
+    "description": "Promote sustainability and organize eco-friendly initiatives on campus.",
+    "logo": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 95,
+    "meetings": "Saturdays 2:00 PM"
+  },
+  {
+    "id": 7,
+    "name": "Chess Club",
+    "category": "academic",
+    "description": "Sharpen your strategic thinking and compete in tournaments against other universities.",
+    "logo": "https://images.unsplash.com/photo-1565043747032-3f0f7a8d2d4c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 50,
+    "meetings": "Thursdays 5:00 PM"
+  },
+  {
+    "id": 8,
+    "name": "Dance Club",
+    "category": "arts",
+    "description": "Express yourself through various dance styles. Perform at campus events and competitions.",
+    "logo": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 70,
+    "meetings": "Tuesdays & Fridays 6:00 PM"
+  },
+  {
+    "id": 9,
+    "name": "Soccer Club",
+    "category": "sports",
+    "description": "Competitive soccer team with regular training sessions and matches against other colleges.",
+    "logo": "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
+    "members": 40,
+    "meetings": "Mondays & Wednesdays 4:00 PM"
+  }
+]

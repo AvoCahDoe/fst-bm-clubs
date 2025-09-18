@@ -1,0 +1,173 @@
+<div class="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+  <div class="container mx-auto px-4 py-8">
+    <!-- Section En-tête -->
+    <header class="text-center mb-12 mt-6">
+      <div class="flex justify-center mb-6">
+        <div class="logo-animation">
+          <div class="w-24 h-24 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg">
+            <i class="fas fa-graduation-cap text-white text-4xl"></i>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">Faculté des Sciences et Techniques 
+Béni Mellal</h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Découvrez et connectez-vous avec des clubs qui correspondent à vos intérêts</p>
+      
+      <!-- Recherche et Filtres -->
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+        <div class="relative w-full max-w-md">
+          <div class="search-box flex items-center bg-white rounded-full px-4 py-3 shadow-md">
+            <i class="fas fa-search text-gray-400 mr-3"></i>
+            <input 
+              type="text" 
+              placeholder="Rechercher un club..." 
+              class="w-full focus:outline-none"
+              [value]="searchQuery()"
+              (input)="onSearchChange($event.target.value)"
+            >
+          </div>
+        </div>
+        
+        <div class="flex gap-2 flex-wrap justify-center">
+          @for (category of categories; track category.value) {
+            <button 
+              (click)="onCategoryChange(category.value)"
+              [class]="selectedCategory() === category.value ? 'bg-blue-500 text-white' : 'bg-white text-gray-700 hover:bg-gray-100'"
+              class="category-badge px-4 py-2 rounded-full text-sm font-medium shadow transition-colors"
+            >
+              {{ category.name }}
+            </button>
+          }
+        </div>
+        
+        <button 
+          (click)="resetFilters()" 
+          class="px-4 py-2 bg-white text-gray-700 rounded-full text-sm font-medium shadow hover:bg-gray-100 transition-colors flex items-center"
+        >
+          <i class="fas fa-times mr-2"></i> Réinitialiser
+        </button>
+      </div>
+    </header>
+
+    <!-- Grille des Clubs -->
+    <div class="mb-12">
+      @if (filteredClubs().length === 0 && !isLoading()) {
+        <div class="text-center py-16">
+          <i class="fas fa-search text-5xl text-gray-300 mb-4"></i>
+          <h3 class="text-2xl font-semibold text-gray-700 mb-2">Aucun club trouvé</h3>
+          <p class="text-gray-500 mb-6">Essayez de modifier vos critères de recherche ou de filtre</p>
+          <button 
+            (click)="resetFilters()" 
+            class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-indigo-600 transition-colors shadow-lg"
+          >
+            Réinitialiser les filtres
+          </button>
+        </div>
+      } @else if (isLoading()) {
+        <div class="text-center py-16">
+          <i class="fas fa-spinner fa-spin text-4xl text-blue-500"></i>
+          <p class="mt-4 text-gray-600">Chargement des clubs...</p>
+        </div>
+      } @else {
+        <div class="space-y-6">
+          @for (club of filteredClubs(); track club.id; let i = $index) {
+            <div 
+              class="club-card bg-white rounded-xl overflow-hidden shadow-md opacity-0 fade-in"
+              [style.animation-delay]="i * 0.1 + 's'"
+            >
+              <div class="flex">
+                <!-- Fixed-size Image Container -->
+                <div class="w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
+                  <img [src]="club.logo" [alt]="club.name" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Content -->
+                <div class="flex-grow p-5">
+                  <div class="flex justify-between items-start">
+                    <div>
+                      <h3 class="text-xl font-bold text-gray-800">{{ club.name }}</h3>
+                      <span 
+                        class="inline-block mt-1 px-2 py-1 text-xs font-semibold rounded-full capitalize"
+                        [ngClass]="getCategoryClass(club.category)"
+                      >
+                        {{ club.category }}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <p class="text-gray-600 mt-3 text-sm">{{ club.description }}</p>
+                  
+                  <div class="flex flex-wrap gap-3 mt-4 text-xs text-gray-500">
+                    <span class="flex items-center"><i class="fas fa-users mr-1"></i> {{ club.members }} membres</span>
+                    <span class="flex items-center"><i class="fas fa-calendar-alt mr-1"></i> {{ club.meetings }}</span>
+                  </div>
+                  
+                  <!-- Expand Button -->
+                  <button 
+                    (click)="toggleDetails(club.id)" 
+                    class="mt-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg text-sm font-medium hover:from-indigo-600 hover:to-blue-700 transition-all flex items-center"
+                  >
+                    <span>{{ isExpanded(club.id) ? 'Afficher moins de détails' : 'Afficher plus de détails' }}</span>
+                    <i 
+                      class="fas ml-2 transition-transform duration-300"
+                      [class.fa-chevron-down]="!isExpanded(club.id)"
+                      [class.fa-chevron-up]="isExpanded(club.id)"
+                    ></i>
+                  </button>
+                  
+                  <!-- Expanded Details -->
+                  @if (isExpanded(club.id)) {
+                    <div class="mt-4 pt-4 border-t border-gray-200 animate-expand">
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <h4 class="font-semibold text-gray-800 mb-2">À propos</h4>
+                          <p class="text-gray-600 text-sm">{{ club.longDescription }}</p>
+                          
+                          <h4 class="font-semibold text-gray-800 mt-4 mb-2">Activités</h4>
+                          <ul class="space-y-1">
+                            @for (activity of club.activities; track $index) {
+                              <li class="flex items-start text-sm">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2 text-xs"></i>
+                                <span class="text-gray-600">{{ activity }}</span>
+                              </li>
+                            }
+                          </ul>
+                        </div>
+                        
+                        <div>
+                          <h4 class="font-semibold text-gray-800 mb-2">Contact</h4>
+                          <div class="bg-gray-50 rounded-lg p-3">
+                            <p class="text-gray-600 text-sm"><i class="fas fa-envelope mr-2"></i> {{ club.contact.email }}</p>
+                            <p class="text-gray-600 mt-2 text-sm"><i class="fas fa-user mr-2"></i> Président : {{ club.contact.president }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              </div>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- Bouton Afficher Plus -->
+    @if (!isLoading() && filteredClubs().length > 0 && hasMoreClubs()) {
+      <div class="text-center mb-12">
+        <button 
+          (click)="showMore()" 
+          class="show-more-btn px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full text-base font-semibold shadow-lg hover:from-indigo-600 hover:to-blue-700 transition-all"
+        >
+          <i class="fas fa-plus-circle mr-2"></i> Afficher plus de clubs
+        </button>
+      </div>
+    }
+
+    <!-- Pied de page -->
+    <footer class="text-center py-8 text-gray-600 border-t border-gray-200">
+      <p>© 2023 Annuaire des Clubs Universitaires. Tous droits réservés.</p>
+      <p class="mt-2">Découvrez votre passion, connectez-vous avec vos pairs et créez des souvenirs durables.</p>
+    </footer>
+  </div>
+</div>
